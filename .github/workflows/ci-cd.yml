@@ -57,6 +57,6 @@ jobs:
           username: ${{ env.REGISTRY_USERNAME }}
           password: ${{ env.REGISTRY_PASSWORD }}
       - name: Build Docker image
-        run: docker build . --file Dockerfile --tag ${{ env.REGISTRY_URL }}/${{ env.IMAGE }}:latest
+        run: docker build app --file Dockerfile --tag ${{ env.REGISTRY_URL }}/${{ env.IMAGE }}:latest
       - name: Push to registry
         run: docker push ${{ env.REGISTRY_URL }}/${{ env.IMAGE }}:latest
