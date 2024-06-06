@@ -1,10 +1,9 @@
-import { HelloController } from './server/controller/hello/hello'
-import Server from './server/server'
-
 import 'dotenv/config'
+import createServer from './server/server'
 
-// Initialize services
-const helloController = new HelloController()
+// Launch server
+const app = createServer()
 
-const s = new Server(3000, helloController)
-s.serve()
+app.listen(3000, () => {
+  console.log(`Example app listening on port 3000`)
+})
