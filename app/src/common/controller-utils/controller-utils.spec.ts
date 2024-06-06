@@ -1,10 +1,8 @@
 import { test, expect } from '@jest/globals'
 import { createResponse } from 'node-mocks-http'
-import { BaseController } from './baseController'
+import baseController from './controller-utils'
 
 describe('Hello Controller', () => {
-  const baseController = new BaseController()
-
   test('Should return 200 status code by default', () => {
     const res = createResponse()
 
