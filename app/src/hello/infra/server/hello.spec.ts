@@ -1,4 +1,4 @@
-import { test, expect } from '@jest/globals'
+import { describe, test, expect } from '@jest/globals'
 import createServer from '../../../server/server'
 import request from 'supertest'
 
